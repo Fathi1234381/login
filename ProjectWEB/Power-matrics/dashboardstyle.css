@@ -1,0 +1,356 @@
+/* Power Metrics Dashboard Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    /* White to green gradient background */
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 20%, #dcfce7 40%, #bbf7d0 60%, #86efac 80%, #4ade80 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Main blur container */
+.blur-container {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1000px;
+    min-height: 500px;
+    padding: 30px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.blur-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.2) 0%, 
+        rgba(255, 255, 255, 0.1) 100%);
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+/* Power Metrics Title */
+.power-metrics-title {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    color: #1f2937;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Metrics Container */
+.metrics-container {
+    margin-top: 60px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Base card styles */
+.metric-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.3) 0%, 
+        rgba(255, 255, 255, 0.1) 100%);
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+/* Volt Card */
+.volt-card {
+    width: 200px;
+    height: 160px;
+}
+
+.volt-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.volt-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.volt-label {
+    font-size: 0.9rem;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Amp Card */
+.amp-card {
+    width: 200px;
+    height: 160px;
+}
+
+.amp-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.amp-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.amp-label {
+    font-size: 0.9rem;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Watt Card */
+.watt-card {
+    width: 200px;
+    height: 160px;
+}
+
+.watt-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.watt-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.watt-label {
+    font-size: 0.9rem;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Status Badge */
+.status-badge {
+    background: rgba(76, 175, 80, 0.2);
+    border: 1px solid rgba(76, 175, 80, 0.4);
+    color: #2e7d32;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* kWh Card */
+.kwh-card {
+    width: 200px;
+    height: 200px;
+}
+
+.kwh-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.kwh-number {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.kwh-label {
+    font-size: 0.9rem;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.today-info {
+    color: #374151;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.today-label {
+    color: #6b7280;
+    margin-right: 5px;
+}
+
+.today-value {
+    font-weight: bold;
+    color: #1f2937;
+}
+
+/* Chart Container */
+.chart-container {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chart-title {
+    color: #1f2937;
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chart-legend {
+    display: flex;
+    gap: 20px;
+    font-size: 0.85rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #374151;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+.legend-volt { 
+    background-color: #dc2626; 
+}
+
+.legend-current { 
+    background-color: #6b7280; 
+}
+
+.chart-canvas-container {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    height: 300px;
+    position: relative;
+}
+
+#powerChart {
+    max-height: 100%;
+    width: 100% !important;
+}
+
+/* Placeholder text */
+.placeholder-text {
+    color: #4b5563;
+    text-align: center;
+    font-size: 1rem;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    border: 1px dashed rgba(107, 114, 128, 0.3);
+    margin-top: 30px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .metrics-container {
+        justify-content: center;
+    }
+    
+    .metric-card {
+        width: 180px;
+    }
+    
+    .kwh-card {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .power-metrics-title {
+        font-size: 1.5rem;
+    }
+    
+    .blur-container {
+        width: 95%;
+        padding: 20px;
+    }
+}
