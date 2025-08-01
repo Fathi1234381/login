@@ -1,0 +1,45 @@
+/* Style khusus halaman login dan register */
+.login-page .container,
+.register-page .container {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+}
+
+/* Style khusus halaman kalibrasi */
+.kalibrasi-page .container {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+}
+
+/* Background gambar */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.background {
+  background: url('kalibrasi.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Kotak blur tengah */
+.container-blur {
+  width: 80%;
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1); /* transparan */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+}
